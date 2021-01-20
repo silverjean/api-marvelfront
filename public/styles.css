@@ -1,0 +1,21 @@
+.characters {
+  cursor: pointer;
+}
+img {
+  border: 1px solid #ddd;
+  padding: 5px;
+  width: 150px;
+  height: 160px;
+  margin: 3px;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  object-fit: cover;
+}
+
+img:hover {
+  box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+
+#box {
+  place-items: center;
+}
