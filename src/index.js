@@ -1,11 +1,15 @@
 import api from './services/api';
 
+import FindCharacters from './classes/FindCharacters';
+
 class App {
   constructor() {
     this.offset = 0;
     this.tableBody = document.querySelector('.characters');
     this.pag = document.querySelector('.pagination');
     this.character;
+
+    this.found = new FindCharacters();
   }
   async getAllCharacters() {
     try {
@@ -45,28 +49,6 @@ class App {
       };
     }
   }
-
-  // async getCharacter(request, response) {
-  //   try {
-  //     const url = `https://gateway.marvel.com/v1/public/characters/${this.character}?apikey=07f05d67192c439bf8203269fc153fdd&hash=a2110823d4049282bfbe666bd8e79fff&ts=1609890812920`;
-
-  //     const result = await axios.get(url);
-  //     this.characterId(result.data.data);
-  //   } catch (error) {}
-  // }
-
-  // characterId(data) {
-  //   for (let i of document.getElementsByClassName('test')) {
-  //     i.onclick = (element) => {
-  //       const test = element.target.id;
-
-  //       this.character = test;
-
-  //       this.getCharacter();
-  //     };
-  //   }
-  // }
 }
 const app = new App();
 app.getAllCharacters();
-// app.getCharacter();
